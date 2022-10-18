@@ -32,7 +32,7 @@ public class MovieMain {
 //
 //        System.out.println("Wszyscy rezyserzy: " + movieManager.getAllDirectors());
 
-        List<Movie> movies = movieManager.getMovieByAgeRestriction(AgeRestriction.AdultsOnly);
+        List<Movie> movies = movieManager.getMovieByAgeRestriction(AgeRestriction.ADULTS_ONLY);
         System.out.println("Filmy z kategorii dla dorosłych" + movies);
 
     }
@@ -41,15 +41,15 @@ public class MovieMain {
         MovieManager movieManager = new MovieManager();
         Director firstDirector = new Director("john", 32);
         Director secondDirector = new Director("alice", 22);
-        movieManager.addMovie(new Movie("aaa", Category.HORROR, AgeRestriction.GeneralAudiences, 94, firstDirector))
-                .addMovie(new Movie("bbb", Category.COMEDY, AgeRestriction.ParentalGuidanceSuggested, 91, firstDirector))
-                .addMovie(new Movie("ccc", Category.COMEDY, AgeRestriction.ParentsStronglyCautioned,  87, firstDirector))
-                .addMovie(new Movie("ddd", Category.THRILLER, AgeRestriction.Restricted, 97, firstDirector))
-                .addMovie(new Movie("aaaa", Category.HORROR, AgeRestriction.AdultsOnly, 94, secondDirector))
-                .addMovie(new Movie("bbbb", Category.COMEDY, AgeRestriction.GeneralAudiences,91, secondDirector))
-                .addMovie(new Movie("cccc", Category.COMEDY, AgeRestriction.ParentsStronglyCautioned,87, secondDirector))
-                .addMovie(new Movie("dddd", Category.THRILLER, AgeRestriction.Restricted, 97, secondDirector))
-                .addMovie(new Movie("eeee", Category.SCI_FI, AgeRestriction.AdultsOnly,107, secondDirector));
+        movieManager.addMovie(new Movie("aaa", Category.HORROR, AgeRestriction.GENERAL_AUDIENCES, 94, firstDirector))
+                .addMovie(new Movie("bbb", Category.COMEDY, AgeRestriction.PARENTAL_GUIDANCE_SUGGESTED, 91, firstDirector))
+                .addMovie(new Movie("ccc", Category.COMEDY, AgeRestriction.PARENTS_STRONGLY_CAUTIONED,  87, firstDirector))
+                .addMovie(new Movie("ddd", Category.THRILLER, AgeRestriction.RESTRICTED, 97, firstDirector))
+                .addMovie(new Movie("aaaa", Category.HORROR, AgeRestriction.ADULTS_ONLY, 94, secondDirector))
+                .addMovie(new Movie("bbbb", Category.COMEDY, AgeRestriction.GENERAL_AUDIENCES,91, secondDirector))
+                .addMovie(new Movie("cccc", Category.COMEDY, AgeRestriction.PARENTS_STRONGLY_CAUTIONED,87, secondDirector))
+                .addMovie(new Movie("dddd", Category.THRILLER, AgeRestriction.RESTRICTED, 97, secondDirector))
+                .addMovie(new Movie("eeee", Category.SCI_FI, AgeRestriction.ADULTS_ONLY,107, secondDirector));
 
         return movieManager;
     }

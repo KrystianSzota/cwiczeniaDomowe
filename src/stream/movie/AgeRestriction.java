@@ -1,9 +1,9 @@
 package stream.movie;
 
 public enum AgeRestriction {
-    GeneralAudiences,
-    ParentalGuidanceSuggested,
-    ParentsStronglyCautioned,
-    Restricted,
-    AdultsOnly;
+    GENERAL_AUDIENCES,
+    PARENTAL_GUIDANCE_SUGGESTED,
+    PARENTS_STRONGLY_CAUTIONED,
+    RESTRICTED,
+    ADULTS_ONLY;
 }
